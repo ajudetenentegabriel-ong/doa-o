@@ -31,4 +31,254 @@
       padding: 15px;
     }
 
-    /* ✅ CARRO*
+    /* ✅ CARROSSEL PRINCIPAL */
+    .carousel img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 0px;
+      transition: opacity 0.5s ease;
+      border: 2px solid #222;
+    }
+
+    /* ✅ PROGRESSO NEON */
+    .progress-box {
+      background: #111;
+      padding: 18px;
+      margin-top: 20px;
+      border-radius: 12px;
+      border: 1px solid #222;
+    }
+
+    .modern-progress {
+      width: 100%;
+      height: 16px;
+      background: #222;
+      border-radius: 50px;
+      overflow: hidden;
+      margin-top: 12px;
+      box-shadow: 0 0 12px rgba(0,255,100,0.3);
+    }
+
+    .modern-fill {
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(90deg, #00ff99, #00c853);
+      box-shadow: 0 0 18px #00ff99;
+      transition: width 0.5s ease;
+    }
+
+    .progress-percent {
+      font-size: 13px;
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    /* ✅ BOTÕES VERDES */
+    .donate-buttons {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .donate-buttons button {
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      background: #00c853;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,255,120,0.35);
+      transition: 0.2s;
+    }
+
+    .donate-buttons button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* CTA */
+    .cta {
+      margin-top: 25px;
+    }
+
+    .cta button {
+      width: 100%;
+      padding: 18px;
+      font-size: 20px;
+      font-weight: bold;
+      background: #00ff99;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.4);
+    }
+
+    /* ✅ GALERIA CARROSSEL */
+    .gallery-carousel img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0px;
+      border: 2px solid #222;
+      transition: opacity 0.5s ease;
+    }
+
+    /* QUEM SOMOS */
+    .about-box {
+      text-align: left;
+      line-height: 1.6;
+      font-size: 15px;
+      color: #ddd;
+      background: #111;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #222;
+      box-shadow: 0 0 12px rgba(0,255,120,0.15);
+      margin-top: 20px;
+    }
+
+    footer {
+      margin: 30px 0;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="images/ppnngg.png" alt="Logo ONG">
+</header>
+
+<div class="container">
+
+  <h1>Sua ajuda pode ser a única esperança desses animais 😓</h1>
+
+  <!-- ✅ CARROSSEL PRINCIPAL -->
+  <div class="carousel">
+    <img id="carousel-img" src="images/carrossel-1.jpg">
+  </div>
+
+  <script>
+    const images = [
+      "images/carrossel-1.jpg",
+      "images/carrossel-2.jpg",
+      "images/carrossel-3.jpg"
+    ];
+
+    let index = 0;
+    const carousel = document.getElementById("carousel-img");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      carousel.style.opacity = 0;
+
+      setTimeout(() => {
+        carousel.src = images[index];
+        carousel.style.opacity = 1;
+      }, 300);
+    }, 3000);
+  </script>
+
+  <!-- ✅ PROGRESSO -->
+  <div class="progress-box">
+    <strong>Meta arrecadada até agora</strong>
+    <p><b>R$ 9.450</b> de <b>R$ 20.000</b></p>
+
+    <div class="modern-progress">
+      <div class="modern-fill"></div>
+    </div>
+
+    <p class="progress-percent">45% da meta alcançada</p>
+  </div>
+
+  <!-- ✅ BOTÕES -->
+  <h2 style="margin-top:25px;">Escolha um valor para doar</h2>
+
+  <div class="donate-buttons">
+    <button onclick="window.location.href='COLE_SEU_LINK_AQUI_30'">R$ 30</button>
+    <button onclick="window.location.href='COLE_SEU_LINK_AQUI_50'">R$ 50</button>
+    <button onclick="window.location.href='COLE_SEU_LINK_AQUI_75'">R$ 75</button>
+    <button onclick="window.location.href='COLE_SEU_LINK_AQUI_100'">R$ 100</button>
+    <button onclick="window.location.href='COLE_SEU_LINK_AQUI_150'">R$ 150</button>
+    <button onclick="window.location.href='COLE_SEU_LINK_AQUI_200'">R$ 200</button>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <button>
+      QUERO DOAR AGORA ❤️
+    </button>
+  </div>
+
+  <!-- ✅ GALERIA EM CARROSSEL -->
+  <h2 style="margin-top:30px;">Nossos cãezinhos reabilitados:</h2>
+
+  <div class="gallery-carousel">
+    <img id="gallery-img" src="images/LADOALADO-_1_.webp">
+  </div>
+
+  <script>
+    const galleryImages = [
+      "images/LADOALADO-_1_.webp",
+      "images/LADOALADO-_2_.webp",
+      "images/LADOALADO-_3_.webp",
+      "images/LADOALADO-_4_.webp",
+      "images/LADOALADO-_6_.webp"
+    ];
+
+    let gIndex = 0;
+    const gallery = document.getElementById("gallery-img");
+
+    setInterval(() => {
+      gIndex = (gIndex + 1) % galleryImages.length;
+      gallery.style.opacity = 0;
+
+      setTimeout(() => {
+        gallery.src = galleryImages[gIndex];
+        gallery.style.opacity = 1;
+      }, 300);
+    }, 2500);
+  </script>
+
+  <!-- ✅ QUEM SOMOS -->
+  <h2 style="margin-top:35px;">Quem somos?</h2>
+
+  <div class="about-box">
+    Começamos há mais de +20 anos atrás, com um grupo de protetores que se instalou em um terreno do estado, para cuidar de animais abandonados e sem condições de sobrevivência nas ruas.
+
+    <br><br>
+    A partir disso, foi crescendo cada vez mais, pois o número de abandonados só se multiplicava.
+
+    <br><br>
+    Nosso trabalho vai desde os cuidados do animal, que recebem tratamento no abrigo até ficarem saudáveis e castrados, para serem levados em nossas feirinhas de adoção, realizadas todos os sábados na praça.
+
+    <br><br>
+    Existe também nosso trabalho de conscientização para a população, sobre as leis contra maus tratos e abandono, a importância da posse responsável e da castração.
+
+    <br><br>
+    Hoje estamos com quase 500 animais, entre eles cachorros e gatos.
+
+    <br><br>
+    Nossa maior dificuldade é que não conseguimos manter funcionários pela falta de recursos e temos poucos voluntários.
+
+    <br><br>
+    Mesmo com a ajuda da prefeitura para compra de ração, ainda falta uma enorme quantia para medicação, veterinários, limpeza e estrutura.
+
+    <br><br>
+    Por isso fazemos vários eventos e ações ao longo do ano para arrecadar recursos e continuar com nosso trabalho diário.
+  </div>
+
+  <footer>
+    ONG Vidas Resgatadas – Obrigado por ajudar 🙏🐾
+  </footer>
+
+</div>
+
+</body>
+</html>
