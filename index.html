@@ -155,4 +155,81 @@
 
     setInterval(() => {
       index = (index + 1) % images.length;
-      carousel.style.
+      carousel.style.opacity = 0;
+
+      setTimeout(() => {
+        carousel.src = images[index];
+        carousel.style.opacity = 1;
+      }, 300);
+    }, 3000);
+  </script>
+
+  <!-- ✅ PROGRESSO NEON -->
+  <div class="progress-box">
+    <strong>Meta arrecadada até agora</strong>
+    <p><b>R$ 9.450</b> de <b>R$ 20.000</b></p>
+
+    <div class="modern-progress">
+      <div class="modern-fill"></div>
+    </div>
+
+    <p class="progress-percent">45% da meta alcançada</p>
+  </div>
+
+  <!-- BOTÕES -->
+  <h2 style="margin-top:25px;">Escolha um valor para doar</h2>
+
+  <div class="donate-buttons">
+    <button>R$ 30</button>
+    <button>R$ 50</button>
+    <button>R$ 75</button>
+    <button>R$ 100</button>
+    <button>R$ 150</button>
+    <button>R$ 200</button>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <button onclick="alert('Checkout Mercado Pago será conectado depois')">
+      QUERO DOAR AGORA ❤️
+    </button>
+  </div>
+
+  <!-- ✅ GALERIA AGORA EM CARROSSEL -->
+  <h2 style="margin-top:30px;">Nossos cãezinhos reabilitados:</h2>
+
+  <div class="gallery-carousel">
+    <img id="gallery-img" src="images/LADOALADO-_1_.webp">
+  </div>
+
+  <script>
+    const galleryImages = [
+      "images/LADOALADO-_1_.webp",
+      "images/LADOALADO-_2_.webp",
+      "images/LADOALADO-_3_.webp",
+      "images/LADOALADO-_4_.webp",
+      "images/LADOALADO-_6_.webp"
+    ];
+
+    let gIndex = 0;
+    const gallery = document.getElementById("gallery-img");
+
+    setInterval(() => {
+      gIndex = (gIndex + 1) % galleryImages.length;
+      gallery.style.opacity = 0;
+
+      setTimeout(() => {
+        gallery.src = galleryImages[gIndex];
+        gallery.style.opacity = 1;
+      }, 300);
+    }, 2500);
+  </script>
+
+  <footer>
+    ONG Vidas Resgatadas – Obrigado por ajudar 🙏🐾
+  </footer>
+
+</div>
+
+</body>
+</html>
