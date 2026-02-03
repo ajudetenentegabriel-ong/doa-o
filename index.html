@@ -3,210 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajude Nossa Causa</title>
+
+  <title>Ajude os Animais – Vidas Resgatadas</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f6f8;
-      color: #222;
+      background: #111;
+      color: white;
+      text-align: center;
     }
 
-    header {
-      background: #28a745;
-      padding: 20px;
-      text-align: center;
-      color: white;
+    header img {
+      width: 220px;
+      margin-top: 25px;
+    }
+
+    h1 {
       font-size: 22px;
+      margin: 20px;
       font-weight: bold;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 430px;
       margin: auto;
-      padding: 20px;
+      padding: 15px;
     }
 
-    .hero {
-      background: white;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
-      text-align: center;
-    }
-
-    .hero img {
+    /* CARROSSEL SIMPLES */
+    .carousel img {
       width: 100%;
-      border-radius: 14px;
-      margin-bottom: 20px;
-      max-height: 350px;
-      object-fit: cover;
-    }
-
-    h1 {
-      font-size: 28px;
+      border-radius: 12px;
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    /* Barra de Progresso */
+    /* BARRA DE PROGRESSO */
     .progress-box {
-      margin: 25px 0;
-      text-align: left;
+      background: white;
+      color: black;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 20px;
     }
 
     .progress-bar {
+      width: 100%;
+      height: 18px;
       background: #eee;
       border-radius: 20px;
       overflow: hidden;
-      height: 18px;
+      margin-top: 10px;
     }
 
     .progress-fill {
-      width: 42%;
+      width: 45%;
       height: 100%;
       background: #28a745;
     }
 
-    .donate-box {
-      background: white;
-      border-radius: 16px;
-      padding: 25px;
-      margin-top: 25px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
-      text-align: center;
-    }
-
-    .main-btn {
-      display: block;
-      background: #28a745;
-      color: white;
-      padding: 18px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      margin-bottom: 20px;
-      box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
-    }
-
-    .grid {
+    /* BOTÕES */
+    .donate-buttons {
+      margin-top: 20px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
 
-    .btn {
-      background: #111;
-      color: white;
-      padding: 14px;
-      border-radius: 10px;
+    .donate-buttons button {
+      padding: 15px;
+      font-size: 18px;
       font-weight: bold;
-      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff9800;
+      color: white;
       transition: 0.2s;
     }
 
-    .btn:hover {
-      background: #28a745;
-      transform: scale(1.03);
+    .donate-buttons button:hover {
+      transform: scale(1.05);
     }
 
-    /* Provas sociais */
+    /* CTA PRINCIPAL */
+    .cta {
+      margin-top: 25px;
+    }
+
+    .cta button {
+      width: 100%;
+      padding: 18px;
+      font-size: 20px;
+      font-weight: bold;
+      background: #00c853;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    /* PROVAS SOCIAIS */
     .proof {
       background: white;
-      border-radius: 16px;
-      padding: 20px;
+      color: black;
+      padding: 15px;
+      border-radius: 12px;
       margin-top: 25px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+      text-align: left;
+      font-size: 14px;
     }
 
-    .msg {
-      background: #f1f1f1;
-      padding: 12px;
+    .proof strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* IMAGENS REABILITADOS */
+    .gallery img {
+      width: 100%;
       border-radius: 12px;
-      margin: 10px 0;
-      font-size: 15px;
+      margin-top: 12px;
     }
 
     footer {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-      padding: 20px;
+      margin: 30px 0;
+      font-size: 13px;
+      opacity: 0.7;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  💚 Ajude Nossa Campanha de Resgate
-</header>
+  <header>
+    <img src="images/ppnngg.png" alt="Logo ONG">
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <!-- Seção principal -->
-  <div class="hero">
-    <img src="https://via.placeholder.com/900x350" alt="Imagem da causa">
+    <h1>Sua ajuda pode ser a única esperança desses animais 😓</h1>
 
-    <h1>Ajude a salvar vidas hoje 🙏</h1>
-    <p>
-      Estamos resgatando e cuidando de animais em situação crítica.
-      Cada doação é essencial para garantir tratamento, alimentação e abrigo.
-    </p>
+    <!-- CARROSSEL -->
+    <div class="carousel">
+      <img src="images/carrossel-1.jpg">
+      <img src="images/carrossel-2.jpg">
+      <img src="images/carrossel-3.jpg">
+    </div>
 
-    <!-- Barra de progresso -->
+    <!-- PROGRESSO -->
     <div class="progress-box">
-      <p><strong>🎯 Meta:</strong> R$50.000</p>
-      <p><strong>💰 Arrecadado:</strong> R$21.300 (42%)</p>
+      <strong>Meta arrecadada até agora</strong>
+      <p>R$ 9.450 de R$ 20.000</p>
 
       <div class="progress-bar">
         <div class="progress-fill"></div>
       </div>
     </div>
-  </div>
 
-  <!-- Área de doação -->
-  <div class="donate-box">
-    <h2>💚 Escolha um valor para doar agora</h2>
+    <!-- BOTÕES DE VALOR -->
+    <h2 style="margin-top:25px;">Escolha um valor para doar</h2>
 
-    <a href="#" class="main-btn">
-      ❤️ QUERO DOAR AGORA
-    </a>
-
-    <div class="grid">
-      <a href="#" class="btn">R$30</a>
-      <a href="#" class="btn">R$50</a>
-      <a href="#" class="btn">R$75</a>
-      <a href="#" class="btn">R$100</a>
-      <a href="#" class="btn">R$150</a>
-      <a href="#" class="btn">R$200</a>
-      <a href="#" class="btn">R$300</a>
-      <a href="#" class="btn">R$500</a>
+    <div class="donate-buttons">
+      <button>R$ 30</button>
+      <button>R$ 50</button>
+      <button>R$ 75</button>
+      <button>R$ 100</button>
+      <button>R$ 150</button>
+      <button>R$ 200</button>
     </div>
+
+    <!-- CTA PRINCIPAL -->
+    <div class="cta">
+      <button onclick="alert('Checkout será conectado depois')">
+        QUERO DOAR AGORA ❤️
+      </button>
+    </div>
+
+    <!-- PROVAS SOCIAIS -->
+    <div class="proof">
+      <strong>❤️ Provas sociais</strong>
+      “Doei R$50 e recebi atualização no Instagram!” – Juliana<br><br>
+      “Projeto sério, acompanho há meses.” – Marcos<br><br>
+      “Eles realmente resgatam animais, já vi pessoalmente.” – Renata
+    </div>
+
+    <!-- GALERIA -->
+    <h2 style="margin-top:30px;">Nossos cãezinhos reabilitados:</h2>
+
+    <div class="gallery">
+      <img src="images/LADOALADO-_1_.webp">
+      <img src="images/LADOALADO-_2_.webp">
+      <img src="images/LADOALADO-_3_.webp">
+      <img src="images/LADOALADO-_4_.webp">
+      <img src="images/LADOALADO-_6_.webp">
+    </div>
+
+    <!-- QUEM SOMOS -->
+    <h2 style="margin-top:30px;">Quem somos?</h2>
+
+    <img src="images/Abrigo-temporario-para-caes.jpg" style="width:100%; border-radius:12px;">
+
+    <p style="text-align:left; margin-top:15px; line-height:1.5;">
+      Começamos há mais de +20 anos atrás, com um grupo de protetores
+      cuidando de animais abandonados...
+      Hoje temos quase 500 animais e precisamos de apoio para continuar.
+    </p>
+
+    <footer>
+      ONG Vidas Resgatadas – Obrigado por ajudar 🙏🐾
+    </footer>
+
   </div>
-
-  <!-- Provas sociais -->
-  <div class="proof">
-    <h3>💬 Pessoas que doaram agora</h3>
-
-    <div class="msg">✅ “Acabei de doar R$100, força pra vocês 🙏”</div>
-    <div class="msg">❤️ “Doação feita! Que Deus abençoe esse projeto.”</div>
-    <div class="msg">🐶 “Compartilhei e doei R$50 agora mesmo!”</div>
-  </div>
-
-</div>
-
-<footer>
-  Página de doação segura — pagamentos serão feitos via Mercado Pago oficial.
-</footer>
 
 </body>
 </html>
