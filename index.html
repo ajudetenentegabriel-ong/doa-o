@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Ajude os Animais – Vidas Resgatadas</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #111;
+      background: #0b0b0b;
       color: white;
       text-align: center;
     }
 
     header img {
-      width: 220px;
+      width: 200px;
       margin-top: 25px;
     }
 
@@ -32,45 +31,47 @@
       padding: 15px;
     }
 
-    /* ✅ CARROSSEL AUTOMÁTICO */
+    /* ✅ CARROSSEL PRINCIPAL RETANGULAR */
     .carousel img {
       width: 100%;
-      border-radius: 14px;
-      margin-bottom: 10px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 0px;
       transition: opacity 0.5s ease;
+      border: 2px solid #222;
     }
 
-    /* ✅ PROGRESSO MODERNO */
+    /* ✅ PROGRESSO COM NEON */
     .progress-box {
-      background: white;
-      color: black;
+      background: #111;
       padding: 18px;
-      border-radius: 14px;
       margin-top: 20px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      border: 1px solid #222;
     }
 
     .modern-progress {
       width: 100%;
-      height: 14px;
-      background: #eee;
+      height: 16px;
+      background: #222;
       border-radius: 50px;
       overflow: hidden;
-      margin-top: 10px;
+      margin-top: 12px;
+      box-shadow: 0 0 12px rgba(0,255,100,0.3);
     }
 
     .modern-fill {
       width: 45%;
       height: 100%;
-      background: linear-gradient(90deg, #00c853, #b2ff59);
-      border-radius: 50px;
+      background: linear-gradient(90deg, #00ff99, #00c853);
+      box-shadow: 0 0 18px #00ff99;
       transition: width 0.5s ease;
     }
 
     .progress-percent {
       font-size: 13px;
-      margin-top: 8px;
-      color: #444;
+      margin-top: 10px;
+      color: #aaa;
     }
 
     /* ✅ BOTÕES */
@@ -86,19 +87,13 @@
       font-size: 18px;
       font-weight: bold;
       border: none;
-      border-radius: 12px;
       cursor: pointer;
       background: #ff9800;
       color: white;
-      transition: 0.2s;
+      border-radius: 10px;
     }
 
-    .donate-buttons button:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-
-    /* ✅ CTA PRINCIPAL */
+    /* CTA */
     .cta {
       margin-top: 25px;
     }
@@ -108,63 +103,21 @@
       padding: 18px;
       font-size: 20px;
       font-weight: bold;
-      background: #00c853;
+      background: #00ff99;
       border: none;
-      border-radius: 14px;
       cursor: pointer;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.35);
-      transition: 0.2s;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.4);
     }
 
-    .cta button:hover {
-      transform: scale(1.03);
-    }
-
-    /* ✅ PROVAS SOCIAIS ESTILO FACEBOOK */
-    .fb-comments {
-      background: white;
-      color: black;
-      padding: 18px;
-      border-radius: 14px;
-      margin-top: 25px;
-      text-align: left;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
-    }
-
-    .fb-comments h3 {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    .fb-comment {
-      display: flex;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .fb-comment img {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .fb-comment p {
-      margin: 4px 0;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .fb-comment span {
-      font-size: 12px;
-      color: gray;
-    }
-
-    /* ✅ GALERIA */
-    .gallery img {
+    /* ✅ SEGUNDO CARROSSEL (GALERIA) */
+    .gallery-carousel img {
       width: 100%;
-      border-radius: 14px;
-      margin-top: 12px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0px;
+      border: 2px solid #222;
+      transition: opacity 0.5s ease;
     }
 
     footer {
@@ -177,133 +130,29 @@
 
 <body>
 
-  <header>
-    <img src="images/ppnngg.png" alt="Logo ONG">
-  </header>
+<header>
+  <img src="images/ppnngg.png" alt="Logo ONG">
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <h1>Sua ajuda pode ser a única esperança desses animais 😓</h1>
+  <h1>Sua ajuda pode ser a única esperança desses animais 😓</h1>
 
-    <!-- ✅ CARROSSEL AUTOMÁTICO -->
-    <div class="carousel">
-      <img id="carousel-img" src="images/carrossel-1.jpg" alt="Carrossel">
-    </div>
-
-    <!-- ✅ SCRIPT DO CARROSSEL -->
-    <script>
-      const images = [
-        "images/carrossel-1.jpg",
-        "images/carrossel-2.jpg",
-        "images/carrossel-3.jpg"
-      ];
-
-      let index = 0;
-      const carousel = document.getElementById("carousel-img");
-
-      setInterval(() => {
-        index = (index + 1) % images.length;
-        carousel.style.opacity = 0;
-
-        setTimeout(() => {
-          carousel.src = images[index];
-          carousel.style.opacity = 1;
-        }, 300);
-
-      }, 3000);
-    </script>
-
-    <!-- ✅ PROGRESSO MODERNO -->
-    <div class="progress-box">
-      <strong>Meta arrecadada até agora</strong>
-      <p><b>R$ 9.450</b> de <b>R$ 20.000</b></p>
-
-      <div class="modern-progress">
-        <div class="modern-fill"></div>
-      </div>
-
-      <p class="progress-percent">45% da meta alcançada</p>
-    </div>
-
-    <!-- BOTÕES DE VALOR -->
-    <h2 style="margin-top:25px;">Escolha um valor para doar</h2>
-
-    <div class="donate-buttons">
-      <button>R$ 30</button>
-      <button>R$ 50</button>
-      <button>R$ 75</button>
-      <button>R$ 100</button>
-      <button>R$ 150</button>
-      <button>R$ 200</button>
-    </div>
-
-    <!-- CTA PRINCIPAL -->
-    <div class="cta">
-      <button onclick="alert('Checkout Mercado Pago será conectado depois')">
-        QUERO DOAR AGORA ❤️
-      </button>
-    </div>
-
-    <!-- ✅ PROVAS SOCIAIS ESTILO FACEBOOK -->
-    <div class="fb-comments">
-      <h3>💬 Comentários</h3>
-
-      <div class="fb-comment">
-        <img src="images/user1.png">
-        <div>
-          <strong>Juliana Costa</strong>
-          <p>Projeto muito sério, já ajudei e acompanho sempre 🙏</p>
-          <span>Curtir · Responder · 2h</span>
-        </div>
-      </div>
-
-      <div class="fb-comment">
-        <img src="images/user2.png">
-        <div>
-          <strong>Marcos Almeida</strong>
-          <p>Que Deus abençoe vocês, trabalho lindo demais ❤️</p>
-          <span>Curtir · Responder · 5h</span>
-        </div>
-      </div>
-
-      <div class="fb-comment">
-        <img src="images/user3.png">
-        <div>
-          <strong>Renata Silva</strong>
-          <p>Compartilhando agora, espero que cheguem na meta!</p>
-          <span>Curtir · Responder · 1d</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- GALERIA -->
-    <h2 style="margin-top:30px;">Nossos cãezinhos reabilitados:</h2>
-
-    <div class="gallery">
-      <img src="images/LADOALADO-_1_.webp">
-      <img src="images/LADOALADO-_2_.webp">
-      <img src="images/LADOALADO-_3_.webp">
-      <img src="images/LADOALADO-_4_.webp">
-      <img src="images/LADOALADO-_6_.webp">
-    </div>
-
-    <!-- QUEM SOMOS -->
-    <h2 style="margin-top:30px;">Quem somos?</h2>
-
-    <img src="images/Abrigo-temporario-para-caes.jpg"
-         style="width:100%; border-radius:14px;">
-
-    <p style="text-align:left; margin-top:15px; line-height:1.5;">
-      Começamos há mais de +20 anos atrás, com um grupo de protetores
-      cuidando de animais abandonados...
-      Hoje temos quase 500 animais e precisamos de apoio para continuar.
-    </p>
-
-    <footer>
-      ONG Vidas Resgatadas – Obrigado por ajudar 🙏🐾
-    </footer>
-
+  <!-- ✅ CARROSSEL PRINCIPAL -->
+  <div class="carousel">
+    <img id="carousel-img" src="images/carrossel-1.jpg">
   </div>
 
-</body>
-</html>
+  <script>
+    const images = [
+      "images/carrossel-1.jpg",
+      "images/carrossel-2.jpg",
+      "images/carrossel-3.jpg"
+    ];
+
+    let index = 0;
+    const carousel = document.getElementById("carousel-img");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      carousel.style.
